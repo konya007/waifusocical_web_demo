@@ -1,0 +1,33 @@
+:root {
+    --deg: 165deg;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+}
+label{
+    font: italic bold 18px cursive;
+}
+button{
+    margin: 10px;
+    align-content: center;
+    cursor: pointer;
+    font:  bold 18px sans-serif;
+    width: fit-content ;
+    padding: 10px;
+    box-sizing: content-box;
+    height: fit-content;
+    border-radius: 29px;
+}
+h3 {
+    font: italic bold 18px cursive;
+    color: rgb(255, 255, 255);
+}
