@@ -9,27 +9,7 @@ body{
     background-color: #3f3f3f; 
     
 }
-@media only screen and (max-width: 768px){
-    .dock-bar{
-        width: 100vw;
-        left: 0;
-    }
-    .l{
-        display: none;
-    }
-    .r{
-        display: none;
-    }
-    .dock-bar::before{
-        display: none;
-    }
-    .dock-bar{
-        transform: translateY(-70px);
-    }
-    .box{
-        width: 100%;
-    }
-}
+
 
 .dock-bar{
    
@@ -305,7 +285,7 @@ i.fa-magnifying-glass{
 .cre-tus input{
     font-size: 1.2rem;
     color: #fff;
-    flex: 1;
+    width: 100%;
     height: 3rem;
     border: 1px dashed #686868;
     background-color: #00000000;
@@ -314,6 +294,7 @@ i.fa-magnifying-glass{
     box-sizing: border-box;
 }
 .box-circle{
+    flex-shrink: 0;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -333,4 +314,25 @@ i.fa-magnifying-glass{
 .r{
     min-width: 250px;
     width: 20%;
+}
+@media only screen and (max-width: 700px){
+    .dock-bar{
+        width: 100vw;
+        left: 0;
+    }
+    .l{
+        display: none;
+    }
+    .r{
+        display: none;
+    }
+    .dock-bar::before{
+        display: none;
+    }
+    .dock-bar{
+        transform: translateY(-70px);
+    }
+    .box{
+        width: 100%;
+    }
 }
