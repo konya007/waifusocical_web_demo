@@ -1,3 +1,7 @@
+:root{
+    --bg:#fff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -204,8 +208,8 @@ i.fa-magnifying-glass{
     width: 120px;
     height: 100%;
     flex-shrink: 0; 
-    /* adtqay */
-    background-color: #ff0000;
+    background-image: url(https://previews.123rf.com/images/klikk/klikk0512/klikk051200067/287925-aut%C3%A9ntico-tv-nieve.jpg);
+    background-size: cover;
     border-radius: 20px;
 }
 .cre-story-box{
@@ -306,23 +310,237 @@ i.fa-magnifying-glass{
     border-radius: 50%;
     overflow: hidden;
     background-color: #4f4f4f;
+    transition: all .2s ease-in;
+}
+.box-circle input{
+    display: none;
+}
+.box-circle:hover{
+    text-shadow: 0 0 20px #fff;
+    background-color: #2d2d2d;
 }
 .feeds{
-    height: 500px;
+    height: fit-content;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
+.hfeed{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+}
+.hfeed-in4{
+    display: flex;
+    align-items: center;
+}
+.hfeed-avt{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.hfeed-name{
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    padding: 0 10px;
+}
+.hfeed-menu{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.hfeed-menu:hover{
+    background-color: #2d2d2d;
+}
+.tus{
+    color: #fff;
+    font: 500 1rem sans-serif;
+    margin: 5px 0;
+}
+.img-feed img{
+    width: 100%;
+    border-radius: 10px;    
+    max-height: 80vh;
+}
+.interact-box{
+    padding: 5px 0;
+    box-sizing: border-box;
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+}
+.itrc{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.itrc i{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.detail-time{
+    cursor:none;
+    font-style: italic;
+}
+.detail-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.cmt-box{
+    width: 100%;
+    height: fit-content;
+}
+.cmt-box {
+    height: fit-content;
+    padding: 5px 0;
+    box-sizing: border-box;
+}
+.my-cmt{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.my-cmt input{
+    height: 2rem;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #808080;
+    padding: 0 10px;
+    color: #fff;
+}
+.avt-cmt{
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.other-cmt{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.cmt-shape{
+    position: relative;
+    background-color: #5a5a5a;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 5px 20px 10px 20px;
+}
+.name-cmt{
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.name-cmt:hover{
+    text-decoration: underline;
+}
+.cmt{
+    color: #fff;
+    font-size: 1rem;
+    font-family: sans-serif;
+
+}
+.cmt-shape img{
+    margin: 5px 0;
+    height: 300px;
+}
+.cmt-shape:hover .time-cmt{
+    display: block ;
+}
+.icon-cmt{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    left: 15px;
+    bottom: -14px;  
+    background-color: #5a5a5a;
+    width: fit-content;
+    padding: 0 10px;
+    height: 28px;
+    border-radius: 14px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 5px;
+}
+.time-cmt{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: #c7c7c7;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.icon-cmt:hover i{
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 50px;
+    width: 50px;
+}
+
+
+
 /*  */
 .r{
     min-width: 250px;
     width: 20%;
+}
+@media only screen and (max-width: 1000px){
+    .l{
+        display: none;
+    }
+    .box{
+        width: 85%;
+    }
 }
 @media only screen and (max-width: 700px){
     .dock-bar{
         width: 100vw;
         left: 0;
     }
-    .l{
-        display: none;
-    }
+    
     .r{
         display: none;
     }
