@@ -1,5 +1,6 @@
 :root {
     --deg: 165deg;
+    --bg-box: #2b2b2b;
 }
 
 html {
@@ -8,49 +9,49 @@ html {
 
 body {
     margin: 0;
-    
     background-size: cover;
     background-repeat: repeat;
     display: flex;
 }
-img{
+
+img {
     height: 100%;
     object-fit: cover;
 }
-label{
+
+label {
     font: italic bold 18px cursive;
 }
-button{
+
+button {
     margin: 10px;
     align-content: center;
     cursor: pointer;
-    font:  bold 18px sans-serif;
-    width: fit-content ;
+    font: bold 18px sans-serif;
+    width: fit-content;
     padding: 10px;
     box-sizing: content-box;
     height: fit-content;
     border-radius: 29px;
 }
+
 h3 {
     font: italic bold 18px cursive;
     color: rgb(255, 255, 255);
 }
-#scroll::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.216);
-	border-radius: 10px;
-	background-color: #333333;
+
+#scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--bg-box);
 }
 
-#scroll::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #44444400;
+#scroll::-webkit-scrollbar {
+    width: 12px;
+    background-color: #00000022;
 }
 
-#scroll::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #4a4a4a;
+#scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #0000003f;
 }
