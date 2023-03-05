@@ -11,6 +11,7 @@
     --bg-box: #3f3f3f;
     --bg-box2: #3d3d3d;
     --text: #fff;
+    --liked: #ff0000;
 }
 
 * {
@@ -85,7 +86,7 @@ body {
 .l {
     min-width: 250px;
     width: 20%;
-    background-color: var(--bg-lr);
+    background-image: linear-gradient(-90deg, var(--bg), var(--bg-lr));
 }
 
 .logo-box {
@@ -415,6 +416,13 @@ i.fa-magnifying-glass {
     justify-content: space-between;
     flex-wrap: wrap;
     color: var(--text);
+    position: relative;
+}
+
+.heart-int {
+    position: absolute;
+    top: 5px;
+    color: #00000000;
 }
 
 .itrc {
@@ -426,6 +434,14 @@ i.fa-magnifying-glass {
 .itrc i {
     font-size: 1.6rem;
     cursor: pointer;
+}
+
+.itrc>i:hover.heart-int {
+    color: var(--text);
+}
+
+.liked {
+    color: #ff0000!important;
 }
 
 .detail {
@@ -566,6 +582,7 @@ i.fa-magnifying-glass {
 .r {
     min-width: 250px;
     width: 20%;
+    background-image: linear-gradient(90deg, var(--bg), var(--bg-lr));
 }
 
 .menu1-r {
@@ -641,6 +658,13 @@ i.fa-magnifying-glass {
     }
     .box {
         width: 100%;
+    }
+    .interact-box {
+        flex-direction: column;
+    }
+    .detail {
+        width: 100%;
+        justify-content: space-aroundq;
     }
     html {
         font-size: 14px;
