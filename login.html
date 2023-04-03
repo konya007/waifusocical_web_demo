@@ -5,38 +5,577 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chào mừng Oni-chan!!!</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./asset/css/login.css">
+    <title>Waifu</title>
+    <link rel="shortcut icon" href="/asset/img/avt.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/feed.css">
+    <link rel="stylesheet" href="./asset/css/music.css">
 </head>
 
 <body>
-    <div class="left-side">
-        <div class="canvas">
-            <img id="pic-girl" src="./asset/img/hifumi.png" alt="">
-            <img id="pic-girl-2" src="./asset/img/mirai.png" alt="">
+    <div id="music-box">
+        <div id="bg-music"></div>
+        <div id="close-music">
+            <i class="fa-solid fa-xmark"></i>
         </div>
-    </div>
-    <div class="right-side">
-        <div id="box-login">
-            <h3>Hãy tham gia mạng xã hội cùng Waifu nào!</h1>
-                <div id="box-login-input">
-                        <label for="username">Tên đăng nhập: </label>
-                        <input class="box-input" id="username" placeholder="Nhập sdt hoặc email " type="text">
-                       
-                        <label for="pw">Mật khẩu:</label>
-                        <input class="box-input" placeholder="Nhập mật khẩu..." type="password" id="pw">
-                                          
-                        
-                        
-                        <button class="button">
-                            Đăng nhập
-                        </button>
-                   
+        <div id="disk-music">
+            <img src="" alt=""></img>
+        </div>
+        <div id="info-music">
+            <h1 id="song-name"></h1>
+            <h2 id="artist-name"></h2>
+        </div>
+        <div id="timeline-music">
+            <p id="music-now">00:00</p>
+            <p id="music-end">00:00</p>
+        </div>
+        <div id="prog-music">
+            <div id="prog-hover"></div>
+            <div id="prog-music-now"></div>
+
+        </div>
+        <div id="control-music">
+            <div class="btn-control-music">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="btn-control-music">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="btn-control-music">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="btn-control-music-small">
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="ctrl-vol">
+                    <input type="range" name="" min="0" max="20" id="ctrl-vol">
                 </div>
+            </div>
+        </div>
+        <div id="music-more">
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div id="plist-box" class="scroll">
+
         </div>
     </div>
+
+    <!-- ============================= -->
+    <div id="feed-space">
+        <div class="l">
+            <div class="logo-box">
+                WIBU UNIVERSE!!!
+            </div>
+            <div class="search-box">
+                <div class="icon-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="ip-search" type="search-box" placeholder="Tìm kiếm...">
+                </div>
+
+            </div>
+            <div class="menu1-l">
+                <div class="menu1-l-box">
+                    <i class="fa-solid fa-paw menu1-l-icon"></i>
+                    <h2 class="text-feature">Anime </h2>
+
+                </div>
+                <div class="menu1-l-box">
+
+                    <i class="fa-solid fa-book-skull menu1-l-icon"></i>
+                    <h2 class="text-feature">Manga </h2>
+                </div>
+                <div class="menu1-l-box">
+                    <i class="fa-solid fa-book menu1-l-icon"></i>
+                    <h2 class="text-feature">Light Novel </h2>
+                </div>
+                <div class="menu1-l-box">
+                    <i class="fa-solid fa-child-dress menu1-l-icon"></i>
+                    <h2 class="text-feature">Waifu </h2>
+                </div>
+            </div>
+        </div>
+        <div class="m scroll">
+            <div class="box story">
+                <div class="cre-story-box">
+                    <img src="./asset/img/avt.jpg" alt="">
+                    <div class="title-cre-story-box">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <p>Đăng tải cuộc sống của bạn</p>
+                    </div>
+                </div>
+                <div class="story-box">
+
+                </div>
+                <div class="story-box">
+
+                </div>
+                <div class="story-box">
+
+                </div>
+                <div class="story-box">
+
+                </div>
+                <div class="story-box">
+
+                </div>
+                <div class="more-story">
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </div>
+            </div>
+            <div class="box cre-tus">
+
+                <div class="box-circle">
+                    <img src="./asset/img/avt.jpg" alt="">
+                </div>
+                <input type="text" placeholder="Bạn nghĩ gì vậy?">
+
+
+                <label for="up-img-tus">
+            <div class="box-circle">
+            <i class="fa-solid fa-image"></i>
+            <input type="file" accept="image/*" id="up-img-tus">
+           </div>
+           </label>
+
+            </div>
+            <!-- 1 -->
+            <div class="box feeds">
+                <div class="hfeed">
+                    <div class="hfeed-in4">
+                        <div class="hfeed-avt">
+                            <img src="./asset/img/tsukasa.jpg" alt="">
+                        </div>
+                        <div class="hfeed-name">
+                            Yuzaki Tsukasa
+                        </div>
+                    </div>
+                    <div class="hfeed-menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="tus">
+                    <p>
+                        Anh đừng nhìn em chằm chằm như thế! （；´д｀）ゞ
+                    </p>
+                </div>
+                <div class="img-feed">
+                    <img src="./asset/img/tus1/hVS0Ay5.jpg" alt="">
+                </div>
+                <div class="interact-box">
+                    <div class="itrc">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart heart-int"></i>
+                        <p>
+                            Mog, Regiko và 10.6k...
+                        </p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-text">
+                            3k quan tâm
+                        </p>
+                        <p>•</p>
+                        <p class="detail-text">
+                            4.8k chia sẽ
+                        </p>
+                        <p>•</p>
+                        <p class="detail-time">
+                            3.00PM | 21.01.23
+                        </p>
+                    </div>
+                </div>
+                <div class="cmt-box">
+                    <div class="my-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/avt.jpg" alt="">
+                        </div>
+                        <input type="text" placeholder="Bình luận của bạn...">
+                    </div>
+                    <div class="other-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/tus1/yuzaki_nasa_19785.jpg" alt="">
+                        </div>
+                        <div class="cmt-shape">
+                            <p class="name-cmt">
+                                Yuzaki Nasa
+                            </p>
+                            <p class="cmt">
+                                Em dep lam!
+                            </p>
+                            <img src="./asset/img/tus1/c335d665c92aaeecc7a6346fb03fc77a.jpg" alt="">
+                            <div class="icon-cmt">
+                                <i class="fa-solid fa-heart heart-cmt"></i>
+                                <p>2.3k</p>
+                            </div>
+                            <p class="time-cmt">
+                                3 giờ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="box feeds">
+                <div class="hfeed">
+                    <div class="hfeed-in4">
+                        <div class="hfeed-avt">
+                            <img src="./asset/img/tus2/ayaka.jpg" alt="">
+                        </div>
+                        <div class="hfeed-name">
+                            Kamisato Ayaka
+                        </div>
+                    </div>
+                    <div class="hfeed-menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="tus">
+                    <p>
+                        Đi tản bộ thì thấy điều ước của bạn này!
+                        <br> Có vẻ bạn mệt mỏi lắm (ノへ￣、)
+                    </p>
+                </div>
+                <div class="img-feed">
+                    <img src="./asset/img/tus2/IMG20230226132653.jpg" alt="">
+                </div>
+                <div class="interact-box">
+                    <div class="itrc">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart heart-int"></i>
+                        <p>
+                            Konnn, tentuiistuan và 30.8k...
+                        </p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-text">
+                            19k quan tâm
+                        </p>
+                        <p>•</p>
+                        <p class="detail-text">
+                            3.6k chia sẻ
+                        </p>
+                        <p>•</p>
+                        <p class="detail-time">
+                            9.00PM | 27.02.23
+                        </p>
+                    </div>
+                </div>
+                <div class="cmt-box">
+                    <div class="my-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/avt.jpg" alt="">
+                        </div>
+                        <input type="text" placeholder="Bình luận của bạn...">
+                    </div>
+                    <div class="other-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/tus2/295861355_418371296913654_5156727469388649723_n.jpg" alt="">
+                        </div>
+                        <div class="cmt-shape">
+                            <p class="name-cmt">
+                                Konnn
+                            </p>
+                            <p class="cmt">
+                                Tôi mệt mỏi...
+                            </p>
+                            <!-- <img src="./asset/img/tus1/c335d665c92aaeecc7a6346fb03fc77a.jpg" alt=""> -->
+                            <div class="icon-cmt">
+                                <i class="fa-solid fa-heart heart-cmt"></i>
+                                <p>18k</p>
+                            </div>
+                            <p class="time-cmt">
+                                16 giờ
+                            </p>
+                        </div>
+                    </div>
+                    <div class="other-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/tus2/28b02a8b81727b7a0aa974129d18d717.jpg" alt="">
+                        </div>
+                        <div class="cmt-shape">
+                            <p class="name-cmt">
+                                Aether
+                            </p>
+                            <p class="cmt">
+                                Anh mệt mỏi...
+                            </p>
+                            <img src="./asset/img/tus2/f6bdf5a3c181976bfa351cdd142a258a.jpg" alt="">
+                            <div class="icon-cmt">
+                                <i class="fa-solid fa-heart heart-cmt"></i>
+                                <p>2k</p>
+                            </div>
+                            <p class="time-cmt">
+                                18 giờ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="box feeds">
+                <div class="hfeed">
+                    <div class="hfeed-in4">
+                        <div class="hfeed-avt">
+                            <img src="./asset/img/tsukasa.jpg" alt="">
+                        </div>
+                        <div class="hfeed-name">
+                            Yuzaki Tsukasa
+                        </div>
+                    </div>
+                    <div class="hfeed-menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="tus">
+                    <p>
+                        Anh đừng nhìn em chằm chằm như thế! （；´д｀）ゞ
+                    </p>
+                </div>
+                <div class="img-feed">
+                    <img src="./asset/img/tus1/hVS0Ay5.jpg" alt="">
+                </div>
+                <div class="interact-box">
+                    <div class="itrc">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart heart-int"></i>
+                        <p>
+                            Mog, Regiko và 10.6k...
+                        </p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-text">
+                            3k quan tâm
+                        </p>
+                        <p>•</p>
+                        <p class="detail-text">
+                            4.8k chia sẽ
+                        </p>
+                        <p>•</p>
+                        <p class="detail-time">
+                            3.00PM | 21.01.23
+                        </p>
+                    </div>
+                </div>
+                <div class="cmt-box">
+                    <div class="my-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/avt.jpg" alt="">
+                        </div>
+                        <input type="text" placeholder="Bình luận của bạn...">
+                    </div>
+                    <div class="other-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/tus1/yuzaki_nasa_19785.jpg" alt="">
+                        </div>
+                        <div class="cmt-shape">
+                            <p class="name-cmt">
+                                Yuzaki Nasa
+                            </p>
+                            <p class="cmt">
+                                Em dep lam!
+                            </p>
+                            <img src="./asset/img/tus1/c335d665c92aaeecc7a6346fb03fc77a.jpg" alt="">
+                            <div class="icon-cmt">
+                                <i class="fa-solid fa-heart heart-cmt"></i>
+                                <p>2.3k</p>
+                            </div>
+                            <p class="time-cmt">
+                                3 giờ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="box feeds">
+                <div class="hfeed">
+                    <div class="hfeed-in4">
+                        <div class="hfeed-avt">
+                            <img src="./asset/img/tsukasa.jpg" alt="">
+                        </div>
+                        <div class="hfeed-name">
+                            Yuzaki Tsukasa
+                        </div>
+                    </div>
+                    <div class="hfeed-menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="tus">
+                    <p>
+                        Anh đừng nhìn em chằm chằm như thế! （；´д｀）ゞ
+                    </p>
+                </div>
+                <div class="img-feed">
+                    <img src="./asset/img/tus1/hVS0Ay5.jpg" alt="">
+                </div>
+                <div class="interact-box">
+                    <div class="itrc">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart heart-int"></i>
+                        <p>
+                            Mog, Regiko và 10.6k...
+                        </p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-text">
+                            3k quan tâm
+                        </p>
+                        <p>•</p>
+                        <p class="detail-text">
+                            4.8k chia sẽ
+                        </p>
+                        <p>•</p>
+                        <p class="detail-time">
+                            3.00PM | 21.01.23
+                        </p>
+                    </div>
+                </div>
+                <div class="cmt-box">
+                    <div class="my-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/avt.jpg" alt="">
+                        </div>
+                        <input type="text" placeholder="Bình luận của bạn...">
+                    </div>
+                    <div class="other-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/tus1/yuzaki_nasa_19785.jpg" alt="">
+                        </div>
+                        <div class="cmt-shape">
+                            <p class="name-cmt">
+                                Yuzaki Nasa
+                            </p>
+                            <p class="cmt">
+                                Em dep lam!
+                            </p>
+                            <img src="./asset/img/tus1/c335d665c92aaeecc7a6346fb03fc77a.jpg" alt="">
+                            <div class="icon-cmt">
+                                <i class="fa-solid fa-heart heart-cmt"></i>
+                                <p>2.3k</p>
+                            </div>
+                            <p class="time-cmt">
+                                3 giờ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="box feeds">
+                <div class="hfeed">
+                    <div class="hfeed-in4">
+                        <div class="hfeed-avt">
+                            <img src="./asset/img/tsukasa.jpg" alt="">
+                        </div>
+                        <div class="hfeed-name">
+                            Yuzaki Tsukasa
+                        </div>
+                    </div>
+                    <div class="hfeed-menu">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <div class="tus">
+                    <p>
+                        Anh đừng nhìn em chằm chằm như thế! （；´д｀）ゞ
+                    </p>
+                </div>
+                <div class="img-feed">
+                    <img src="./asset/img/tus1/hVS0Ay5.jpg" alt="">
+                </div>
+                <div class="interact-box">
+                    <div class="itrc">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart heart-int"></i>
+                        <p>
+                            Mog, Regiko và 10.6k...
+                        </p>
+                    </div>
+                    <div class="detail">
+                        <p class="detail-text">
+                            3k quan tâm
+                        </p>
+                        <p>•</p>
+                        <p class="detail-text">
+                            4.8k chia sẽ
+                        </p>
+                        <p>•</p>
+                        <p class="detail-time">
+                            3.00PM | 21.01.23
+                        </p>
+                    </div>
+                </div>
+                <div class="cmt-box">
+                    <div class="my-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/avt.jpg" alt="">
+                        </div>
+                        <input type="text" placeholder="Bình luận của bạn...">
+                    </div>
+                    <div class="other-cmt">
+                        <div class="avt-cmt">
+                            <img src="./asset/img/tus1/yuzaki_nasa_19785.jpg" alt="">
+                        </div>
+                        <div class="cmt-shape">
+                            <p class="name-cmt">
+                                Yuzaki Nasa
+                            </p>
+                            <p class="cmt">
+                                Em dep lam!
+                            </p>
+                            <img src="./asset/img/tus1/c335d665c92aaeecc7a6346fb03fc77a.jpg" alt="">
+                            <div class="icon-cmt">
+                                <i class="fa-solid fa-heart heart-cmt"></i>
+                                <p>2.3k</p>
+                            </div>
+                            <p class="time-cmt">
+                                3 giờ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END -->
+            <div class="footer"></div>
+        </div>
+        <!--  -->
+        <div class="r">
+            <div class="menu1-r">
+                <div class="dark-light ">
+                    <div class="dl-dot"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="dock-bar">
+        <div class="box-dock act-dock">
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <div class="box-dock">
+            <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div class="box-dock">
+            <i class="fa-solid fa-tv"></i>
+        </div>
+        <div class="box-dock">
+            <i class="fa-solid fa-message"></i>
+        </div>
+        <div class="box-dock">
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
+
 </body>
+<script src="./asset/js/theme.js"></script>
+<script src="./asset/js/music.js"></script>
 
 </html>
