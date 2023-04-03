@@ -16,12 +16,56 @@
 
     <link rel="stylesheet" href="./asset/css/main.css">
     <link rel="stylesheet" href="./asset/css/feed.css">
+    <link rel="stylesheet" href="./asset/css/music.css">
 </head>
 
 <body>
+    <div id="music-box">
+        <div id="close-music">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div id="disk-music">
+            <img src="" alt=""></img>
+        </div>
+        <div id="info-music">
+            <h1 id="song-name"></h1>
+            <h2 id="artist-name"></h2>
+        </div>
+        <div id="timeline-music">
+            <p id="music-now">00:00</p>
+            <p id="music-end">00:00</p>
+        </div>
+        <div id="prog-music">
+            <div id="prog-hover"></div>
+            <div id="prog-music-now"></div>
 
+        </div>
+        <div id="control-music">
+            <div class="btn-control-music">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="btn-control-music">
+                <i class="fa-solid fa-play"></i>
+            </div>
+            <div class="btn-control-music">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="btn-control-music-small">
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="ctrl-vol">
+                    <input type="range" name="" min="0" max="20" id="ctrl-vol">
+                </div>
+            </div>
+        </div>
+        <div id="music-more">
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div id="plist-box" class="scroll">
 
-
+        </div>
+    </div>
+    <script src="./asset/js/music.js"></script>
+    <!-- ============================= -->
     <div id="feed-space">
         <div class="l">
             <div class="logo-box">
@@ -55,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <div class="m" id="scroll">
+        <div class="m scroll">
             <div class="box story">
                 <div class="cre-story-box">
                     <img src="./asset/img/avt.jpg" alt="">
@@ -506,6 +550,7 @@
                     <div class="dl-dot"></div>
                 </div>
             </div>
+
         </div>
 
     </div>
