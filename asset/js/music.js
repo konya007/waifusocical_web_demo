@@ -94,14 +94,13 @@ async function readJSON() {
             } else {
                 diskActive(false)
                 showplaylist(data)
+                closeMusic.onclick()
                 for (let i = 0; i < sizeSong; i++) {
                     plItem[i].onclick = (e) => {
                         plItem[nSong].classList.remove("item-song-now")
                         nSong = i
                         firstEvent = false
                         readJSON()
-
-
                     }
                 }
             }
@@ -116,8 +115,6 @@ async function setSong(song) {
     thumImg.src = song[nSong]["img"];
     audioPlay.volume = vol;
     sizeSong = song.length
-
-    closeMusic.onclick()
 
 }
 
