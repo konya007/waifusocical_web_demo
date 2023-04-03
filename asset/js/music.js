@@ -16,7 +16,10 @@ const closeMusic = document.getElementById("close-music")
 const boxMusic = document.getElementById("music-box")
 const inBoxMusic = boxMusic.querySelectorAll("div")
 var plItem = document.getElementsByClassName("item-song")
+const screen = document.getElementById("feed-space")
+var root = document.documentElement
 
+let keepMove = false
 let playlistOn = false;
 var checkPlay = false
 var udtime
@@ -48,14 +51,12 @@ closeMusic.onclick = (e) => {
 }
 
 diskMusic.onclick = (e) => {
-    if (closeBox) {
+    if (closeBox && (keepMove == false)) {
         for (let i = 0; i < inBoxMusic.length; i++) {
             inBoxMusic[i].style.removeProperty("display")
         }
         boxMusic.style = ""
         diskMusic.style = ""
-
-
         closeBox = false
     }
 }
@@ -115,6 +116,7 @@ async function setSong(song) {
     thumImg.src = song[nSong]["img"];
     audioPlay.volume = vol;
     sizeSong = song.length
+    root.style.setProperty('--bgBoxMusic', `url("${song[nSong]["img"]}")`)
 
 }
 
@@ -129,8 +131,10 @@ function updateCur() {
         if (audioPlay.currentTime == audioPlay.duration) {
             pauseMusic()
             if (nSong < sizeSong - 1) {
+                plItem[nSong].classList.remove("item-song-now")
                 nSong++;
                 //suffle & loop
+
                 readJSON()
             }
             audioPlay.currentTime = 0
@@ -230,3 +234,30 @@ function showplaylist(song) {
     })
 
 }
+
+let boxMusicX
+let boxMusicY
+
+
+// screen.onmousemove = (e) => {
+//     if (closeBox == true && keepMove == true) {
+//         boxMusic.style.top = (e.pageY - boxMusicY) + "px"
+//         boxMusic.style.right = (screen.offsetWidth - e.pageX - boxMusicX) + "px"
+//     }
+// }
+
+// boxMusic.onclick = (e) => {
+//     if (closeBox == true) {
+//         if (keepMove == true) {
+//             keepMove = false
+//             boxMusicX = 0
+//             boxMusicY = 0
+
+//         } else {
+//             keepMove = true
+//             boxMusicX = e.offsetX
+//             boxMusicY = e.offsetY
+
+//         }
+//     }
+// }
