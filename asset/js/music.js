@@ -116,7 +116,7 @@ async function setSong(song) {
     thumImg.src = song[nSong]["img"];
     audioPlay.volume = vol;
     sizeSong = song.length
-    root.style.setProperty('--bgBoxMusic', `url("${song[nSong]["img"]}")`)
+    root.style.setProperty('--bgBoxMusic', `url(".${song[nSong]["img"]}")`)
 
 }
 
