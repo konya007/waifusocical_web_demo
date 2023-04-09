@@ -5,38 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chào mừng Oni-chan!!!</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./asset/css/login.css">
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="/asset/css/login.css">
+    <title>Login - Waifu Social</title>
+    <script src="/asset/js/loginCheck.js"></script>
 </head>
 
 <body>
-    <div class="left-side">
-        <div class="canvas">
-            <img id="pic-girl" src="./asset/img/hifumi.png" alt="">
-            <img id="pic-girl-2" src="./asset/img/mirai.png" alt="">
-        </div>
+    <div id="bg-login">
+        <img src="" alt="">
+        <img src="" alt="">
     </div>
-    <div class="right-side">
+
+    <div id="base">
         <div id="box-login">
-            <h3>Hãy tham gia mạng xã hội cùng Waifu nào!</h1>
-                <div id="box-login-input">
-                        <label for="username">Tên đăng nhập: </label>
-                        <input class="box-input" id="username" placeholder="Nhập sdt hoặc email " type="text">
-                       
-                        <label for="pw">Mật khẩu:</label>
-                        <input class="box-input" placeholder="Nhập mật khẩu..." type="password" id="pw">
-                                          
-                        
-                        
-                        <button class="button">
+            <div id="scroll-box">
+                <div id="login">
+                    <p>ĐĂNG NHẬP</p>
+                    <div class="input-box">
+                        <input type="text" name="" id="login-un" placeholder="Tên đăng nhập">
+                        <input type="password" id="login-pw" placeholder="Mật khẩu">
+                        <p class="noice"></p>
+                    </div>
+                    <div class="footer-login">
+                        <div class="Btn">
                             Đăng nhập
-                        </button>
-                   
+                        </div>
+                        <div class="menuAcc">
+                            <div id="forgetAcc">Quên mật khẩu</div>
+                            <div id="createAcc">Đăng ký</div>
+                        </div>
+                    </div>
                 </div>
+                <div id="create">
+                    <p>TẠO TÀI KHOẢN</p>
+                    <div class="input-box">
+                        <input type="text" name="" id="login-cre-name" placeholder="Họ tên của bạn">
+                        <input type="text" name="" id="login-cre-un" placeholder="Tên đăng nhập mới">
+                        <input type="password" id="cre-pw" placeholder="Mật khẩu">
+                        <input type="password" id="cre-pw2" placeholder="Nhập lại mật khẩu">
+                        <p class="noice"></p>
+                    </div>
+                    <div class="footer-login">
+                        <div class="Btn">
+                            Đăng ký!
+                        </div>
+                        <div class="menuAcc">
+                            <div id="backLogin">Quay lại đăng nhập</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
+
 </body>
+<script src="/asset/js/login.js">
+</script>
 
 </html>

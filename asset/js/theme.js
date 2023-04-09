@@ -1,34 +1,9 @@
-const tme = document.getElementsByClassName("dark-light")
-var n = true
-tme[0].onclick = function() {
-    this.classList.toggle('dark-white-w')
-    console.log("ok")
-    if (n == true) {
-        light()
-        n = false
-    } else {
-        dark()
-        n = true
-    }
-}
-
+const tme = document.getElementById("dark-light")
 var vRoot = document.documentElement
 var likedCmtColor = document.getElementsByClassName("heart-cmt")
 let likedColor = document.getElementsByClassName("heart-int")
-for (i = 0; i < likedColor.length; i++) {
-    likedColor[i].onclick = function() {
-        this.classList.toggle('liked')
-    }
-}
-for (i = 0; i < likedCmtColor.length; i++) {
-    likedCmtColor[i].onclick = function() {
-        this.classList.toggle('liked')
-    }
-}
-
 
 function light() {
-
     vRoot.style.setProperty('--bg', '#ddd')
     vRoot.style.setProperty('--bg-dock', '#eeeeee')
     vRoot.style.setProperty('--actice-dock', '#d5d5d5')
@@ -44,7 +19,6 @@ function light() {
 }
 
 function dark() {
-
     vRoot.style.setProperty('--bg', '#2e2e2e')
     vRoot.style.setProperty('--bg-dock', '#313131')
     vRoot.style.setProperty('--actice-dock', '#3c3c3c')
@@ -57,4 +31,37 @@ function dark() {
     vRoot.style.setProperty('--bg-box', '#3f3f3f')
     vRoot.style.setProperty('--bg-box2', '#3d3d3d')
     vRoot.style.setProperty('--text', '#fff')
+}
+//
+
+var stdTheme = localStorage.getItem("theme")
+if (stdTheme == "1") {
+    tme.classList.toggle('dark-white-w')
+    light()
+}
+
+tme.onclick = () => {
+    tme.classList.toggle('dark-white-w')
+    if (stdTheme == "0") {
+        stdTheme = "1"
+        light()
+        localStorage.setItem("theme", stdTheme)
+    } else {
+        stdTheme = "0"
+        dark()
+        localStorage.setItem("theme", stdTheme)
+
+    }
+}
+
+
+for (i = 0; i < likedColor.length; i++) {
+    likedColor[i].onclick = function() {
+        this.classList.toggle('liked')
+    }
+}
+for (i = 0; i < likedCmtColor.length; i++) {
+    likedCmtColor[i].onclick = function() {
+        this.classList.toggle('liked')
+    }
 }
