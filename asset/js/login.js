@@ -150,7 +150,7 @@ conformBtn[0].onclick = async() => {
                         setTimeout(() => {
                             noice[0].style.color = "#00ff8c"
                             noice[0].innerText = "Đăng nhập thành công!"
-                            window.location("/feed.html")
+                            window.location("//feed.html")
                         }, 1000)
                     }
                 }
